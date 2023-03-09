@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def remove_char_at(str, index):
     if index < 0:
         return str
