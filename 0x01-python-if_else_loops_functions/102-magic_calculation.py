@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def remove_char_at(str, index):
+def magic_calculation(a, b, c):
     if a < b:
         return c
     elif b < c:
