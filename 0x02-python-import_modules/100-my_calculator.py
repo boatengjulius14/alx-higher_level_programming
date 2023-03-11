@@ -5,13 +5,13 @@ def calculator(argv):
         sys.exit(1)
     match argv[2]:
         case '+':
-            result = calculator_1.add(int(argv[1]), int(argv[3]))
+            result = add(int(argv[1]), int(argv[3]))
         case '-':
-            result = calculator_1.sub(int(argv[1]), int(argv[3]))
+            result = sub(int(argv[1]), int(argv[3]))
         case '*':
-            result = calculator_1.mul(int(argv[1]), int(argv[3]))
+            result = mul(int(argv[1]), int(argv[3]))
         case '/':
-            result = calculator_1.div(int(argv[1]), int(argv[3]))
+            result = div(int(argv[1]), int(argv[3]))
         case _:
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
@@ -20,5 +20,5 @@ def calculator(argv):
 
 if __name__ == "__main__":
     import sys
-    import calculator_1
+    from calculator_1 import add, sub, mul, div
     calculator(sys.argv)
