@@ -3,19 +3,24 @@ def calculator(argv):
     if len(argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    match argv[2]:
+
+    a = int(argv[1])
+    op = argv[2]
+    b = int(argv[3])
+
+    match op:
         case '+':
-            result = add(int(argv[1]), int(argv[3]))
+            result = add(a, b)
         case '-':
-            result = sub(int(argv[1]), int(argv[3]))
+            result = sub(a, b)
         case '*':
-            result = mul(int(argv[1]), int(argv[3]))
+            result = mul(a, b)
         case '/':
-            result = div(int(argv[1]), int(argv[3]))
+            result = div(a, b)
         case _:
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
-    print("{} {} {} = {}".format(argv[1], argv[2], argv[3], result))
+    print("{:d} {:s} {:d} = {:d}".format(a, op, b, result))
 
 
 if __name__ == "__main__":
