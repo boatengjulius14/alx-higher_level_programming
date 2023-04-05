@@ -1,7 +1,15 @@
 #!/usr/bin/python3
+"""locked class definition"""
+
+
 class LockedClass:
-    try:
-        __slots__ = ['first_name']
-    except:
-        raise AttributeError(f"{self.__class__.__name__} object does \
-            not support attribute assignment")
+    """
+    Prevents the user from dynamically creating any instance attributes
+    apart from 'first_name'
+    """
+    __slots__ = ['first_name']
+
+    def __setattr__(self, name, value):
+        if name != 'first_name' and not hasattr(self, 'first_name'):
+            raise AttributeError(f"{self.__class__.__name__} object\
+ does not support attribute assignment")
