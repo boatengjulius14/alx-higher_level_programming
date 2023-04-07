@@ -43,6 +43,15 @@ Case: passing values of different data types
     Traceback (most recent call last):
     TypeError: size must be an integer
 
+Case: passing a value lower than 0
+    >>> print_square(-5)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    >>> print_square(-7.6)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
 Case: passing more one arguments
     >>> print_square(5, 3)
     Traceback (most recent call last):
