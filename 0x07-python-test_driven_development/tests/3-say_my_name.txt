@@ -32,15 +32,19 @@ Case: passing no argument
 Case: passing values of different data type
     >>> say_my_name(5)
     Traceback (most recent call last):
-    TypeError: first_name must be a string or last_name must be a string
+    TypeError: first_name must be a string
 
     >>> say_my_name(5, 6)
     Traceback (most recent call last):
-    TypeError: first_name must be a string or last_name must be a string
+    TypeError: first_name must be a string
 
     >>> say_my_name("Julius", 5)
     Traceback (most recent call last):
-    TypeError: first_name must be a string or last_name must be a string
+    TypeError: last_name must be a string
+
+    >>> say_my_name(5, "Julius")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
 
 Case: passing more than 3 strings
     >>> say_my_name("Julius", "Addai", "Boateng")
