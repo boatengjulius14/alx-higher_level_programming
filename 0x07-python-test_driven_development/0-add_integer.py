@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""This module adds two integers"""
+"""This module adds two integers
+This module has only one function 'add_integer' which receives
+two int or float values. One parameter is mandatory the other
+is non-mandatory with an int value of 98 being passed automatically
+"""
 
 
 def add_integer(a, b=98):
-    """Returns the addition of integers a + b
-    Args:
-        a (int or float): first argument
-        b (int or float): second argument
-    Return:
-        int: the addition of a and b
-    Raises:
-        TypeError: a must be an integer or b must be an integer
+    """adds two arguments(int or float)
+    Return: the addition of a and b
     """
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
