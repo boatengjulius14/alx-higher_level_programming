@@ -1,0 +1,49 @@
+============================
+How to Use 4-print_square.py
+============================
+
+The function print_square prints a square made up of '#'.
+The dimension of the square is passed as an int argument.
+
+Usage
+=====
+
+Doctest for the function 'print_square' from '4-print_square'.
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Correct inputs
+==============
+Case: passing int values
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(0)
+
+
+    >>> print_square(1)
+    #
+
+Incorrect inputs
+================
+Case: passing no argument
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+Case: passing values of different data types
+    >>> print_square("Hello")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(5.3)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Case: passing more one arguments
+    >>> print_square(5, 3)
+    Traceback (most recent call last):
+    TypeError: print_square() takes 1 positional argument but 2 were given
