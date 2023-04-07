@@ -52,3 +52,20 @@ Doctest for the function 'add_integer' from '0-add_integer'.
     >>> add_integer(["Worst", "School"])
     Traceback (most recent call last):
     TypeError: a must be an integer
+
+    >>> add_integer(float('me'))
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'me'
+
+    >>> add_integer(12, float('you'))
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'you'
+
+
+    >>> add_integer(float('we'))
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'we'
+
+    >>> add_integer(12, float('we'))
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'we'
