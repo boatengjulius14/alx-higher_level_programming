@@ -6,7 +6,7 @@ max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-    """Definition of class TestMaxInteger, subclass
+    """Definition of TestMaxInteger, subclass
     of unittest.TestCase"""
 
     def test_max_digits(self):
@@ -16,6 +16,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([4, 99, 58, 99, 2]), 99)
         self.assertEqual(max_integer([2.89, -10.3, -58, 2.9]), 2.9)
         self.assertEqual(max_integer([10]), 10)
+        self.assertEqual(max_integer([38, 10, -1]), 38)
         self.assertEqual(max_integer([]), None)
 
     def test_raises(self):
