@@ -1,0 +1,65 @@
+=============================
+How to Use 5-text_indentation
+=============================
+
+The function text_indentation from the module 5-text_indentation.py
+prints a text with 2 new lines after each of these characters: . ? and :
+
+Usage
+=====
+
+Doctest for the function 'text_indentation' from '5-text_indentation.py'.
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Correct inputs
+==============
+Case: passing strings
+    >>> text_indentation("Julius? Addai. Boat: eng")
+    Julius?
+    <BLANKLINE>
+    Addai.
+    <BLANKLINE>
+    Boat:
+    <BLANKLINE>
+    eng
+
+    >>> text_indentation("Keep on moving")
+    Keep on moving
+
+    >>> text_indentation("?.:")
+    ?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+    >>> text_indentation("?")
+    ?
+    <BLANKLINE>
+
+    >>> text_indentation("")
+
+
+    >>> text_indentation("Ka:boom")
+    Ka:
+    <BLANKLINE>
+    boom
+
+Incorrect inputs
+================
+Case: passing wrong data type
+    >>> text_indentation(5000)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Case: not passing any argument
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Case: passing two arguments
+    >>> text_indentation("Hello", "World")
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
