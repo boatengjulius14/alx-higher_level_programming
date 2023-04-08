@@ -47,6 +47,13 @@ Case: passing strings
     <BLANKLINE>
     boom
 
+    >>> text_indentation("   Hello.  ?     World  ")
+    Hello.
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    World
+
 Incorrect inputs
 ================
 Case: passing wrong data type
