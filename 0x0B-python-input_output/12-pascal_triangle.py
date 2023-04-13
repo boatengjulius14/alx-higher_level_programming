@@ -4,7 +4,8 @@
 
 def pascal_triangle(n):
     """returns a list of list of integers"""
-    
+    if n <= 0:
+        return []
     _list = [[]]
     for i in range(n):
         if i == 0:
@@ -28,3 +29,8 @@ def pascal_triangle(n):
             _listadd.append(1)
             _list.extend([_listadd])
     return _list
+
+
+def print_triangle(triangle):
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
