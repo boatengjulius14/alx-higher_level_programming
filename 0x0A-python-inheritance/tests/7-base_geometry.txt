@@ -1,0 +1,61 @@
+============================
+How to Use 7-base_geometry.py
+============================
+
+Doctest for the function 'BaseGeometry'
+
+Importing module and then testing class through interactive sessions.
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Cases
+
+    >>> bg = BaseGeometry()
+
+
+    >>> bg.integer_validator("name", "Julius")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("name", (63,))
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("name", [3])
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> bg.integer_validator("value", 0)
+    Traceback (most recent call last):
+    ValueError: value must be greater than 0
+
+    >>> bg.integer_validator("name", True)
+
+
+    >>> bg.integer_validator("name", {1, 2})
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("name", None)
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("distance", -32)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
+
+    >>> bg.integer_validator("my_int", 38)
+
+    >>> bg.integer_validator("width", 2)
+
+    >>> bg.integer_validator() # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError:...
+
+    >>> bg.integer_validator("Julius") # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError:...
