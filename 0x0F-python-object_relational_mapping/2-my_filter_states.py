@@ -18,7 +18,7 @@ if __name__ == "__main__":
     )
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE name = '{}';".format(sys.argv[4]))
+                   WHERE name LIKE '{}';".format(sys.argv[4]))
 
     id_states = cursor.fetchall()
     for i in id_states:
