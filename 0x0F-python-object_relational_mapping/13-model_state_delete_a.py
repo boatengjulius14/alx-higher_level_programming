@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Adds the State object “Louisiana” to the database hbtn_0e_6_usa
+deletes all State objects with a name containing the letter a
+from the database hbtn_0e_6_usa
 """
 
 from sqlalchemy.orm import sessionmaker
@@ -17,7 +18,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     local_session = Session()
 
-    ins_state = State(name="Louisiana")
-    local_session.add(ins_state)
+    states = local_session.query(State)\
+        .filter(State.name.contains('a')).all()
+
+    for i in states:
+        local_session.delete(i)
+
     local_session.commit()
-    print(ins_state.id)
+    local_session.close()
